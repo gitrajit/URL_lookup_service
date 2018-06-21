@@ -81,6 +81,11 @@ Ran 4 tests in 0.102s
 OK
 ```
 
+## Extra scripts to create, insert and view table.
+database.py is the script to create database & table and to insert the values.
+view.py is the scrip to view the malware data.
+url_data.db is the sqlite database.
+
 
 
 
