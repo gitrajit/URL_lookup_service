@@ -49,8 +49,6 @@ D:\url_dic\URL_lookup_service>python urlapi.py
 ```
 
 ## For testing 
-http://localhost:51/urlinfo/1/1.1.1.1:80/xxx
-
 ```
 vagrant@control:~$ curl http://localhost:51/urlinfo/1/1.1.1.1:80/xxx
 {
@@ -58,8 +56,32 @@ vagrant@control:~$ curl http://localhost:51/urlinfo/1/1.1.1.1:80/xxx
   "string safety": "Not Safe, string listed in the database.",
   "url": "http://1.1.1.1:80/xxx"
 }
-vagrant@control:~$
+vagrant@control:~$ curl http://localhost:51/urlinfo/1/test.domain:80/xxx
+{
+  "IP and port Safety": "BLOCKED!, hostname and port are listed in the database.", 
+  "string safety": "BLOCKED, string listed in the database.", 
+  "url": "http://test.domain:80/xxx"
+}
+vagrant@control:~$ curl http://localhost:51/urlinfo/1/test.domain:90/xxabdddd
+{
+  "IP and port Safety": "hostname and port are Safe!", 
+  "string safety": "String Safe as its not listed in database.", 
+  "url": "http://test.domain:90/xxabdddd"
+}
+
 ```
+
+## Unit test script(Unit_test.py)
+
+```
+D:\url_dic\URL_lookup_service>python unit_test.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.102s
+
+OK
+```
+
 
 
 
