@@ -2,7 +2,7 @@
 ### Created Date: 21/06/2018
 ### version: 1.0
 
-## desc: Webservices for scaninig the URL for malware.
+## desc: Webservices for Scaning the URL for malware.
 
 ## Steps to run :
 * Create a directory/folder(eg url_dic) and cd  to it
