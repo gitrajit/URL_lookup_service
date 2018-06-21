@@ -41,4 +41,4 @@ def get_tasks(ip_port,st):
 
 
 if __name__ == '__main__':
-    app.run(host='172.22.245.90', port=51, debug=True)
+    app.run(host='localhost', port=51, debug=True)
