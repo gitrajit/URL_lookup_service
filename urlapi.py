@@ -10,7 +10,7 @@ c = conn.cursor()
 hostname_port = list()
 strig = list()
 
-query = c.execute("select * from malware") # This line performs query and returns json result
+query = c.execute("select * from malware") 
 for i in  query.fetchall():
     hostname_port.append(i[0])
     strig.append(i[1])
