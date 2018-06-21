@@ -15,8 +15,7 @@
   ```
   $ git clone https://github.com/gitrajit/URL_lookup_service.git
   ```
-* install flask as below
-  location for pip.exe <path to your Python27>\Scripts\pip.exe
+* install flask as below, location for pip.exe if pip environment not set; {path to your python home}\Scripts\pip.exe
   ```
   C:\Python27\Scripts>pip.exe install flask
   ```
