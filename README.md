@@ -28,5 +28,40 @@ D:\url_dic\URL_lookup_service>python urlapi.py
  * Debugger pin code: 101-270-382
  * Running on http://localhost:51/ (Press CTRL+C to quit)
  ```
+ 
+ ## To view all the listed ip & port and strings from databases:
+ http://localhost:51/urlinfo/1/
+ 
+ ```
+ vagrant@control:~$ curl http://localhost:51/urlinfo/1/
+{
+  "IP and port": [
+    "1.1.1.0:80",
+    "1.1.1.1:81",
+    "test.domain:80"
+  ],
+  "String": [
+    "xxx",
+    "!&*",
+    "abc"
+  ]
+}
+```
+
+## For testing 
+http://localhost:51/urlinfo/1/1.1.1.1:80/xxx
+
+```
+vagrant@control:~$ curl http://localhost:51/urlinfo/1/1.1.1.1:80/xxx
+{
+  "IP and port Safety": "hostname and port are Safe ",
+  "string safety": "Not Safe, string listed in the database.",
+  "url": "http://1.1.1.1:80/xxx"
+}
+vagrant@control:~$
+```
+
+
+
 
 
